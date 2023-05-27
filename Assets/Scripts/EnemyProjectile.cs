@@ -28,8 +28,14 @@ public class EnemyProjectile : MonoBehaviour
     void OnTriggerEnter(Collider other) {
       if (other.gameObject.tag == "Player") {
         
+        if (Input.GetKey(KeyCode.LeftShift)) {
+          Debug.Log("projectile blocked by player");
+          Destroy(gameObject);
+          
+        } else {
+          Debug.Log("player hit");  
+        }
         
-        Debug.Log("player hit");  
       }
     }
 }
