@@ -24,4 +24,12 @@ public class EnemyProjectile : MonoBehaviour
     {
         rb.AddForce(transform.forward * speed);
     }
+
+    void OnTriggerEnter(Collider other) {
+      if (other.gameObject.tag == "Player") {
+        
+        
+        Debug.Log("player hit");  
+      }
+    }
 }
