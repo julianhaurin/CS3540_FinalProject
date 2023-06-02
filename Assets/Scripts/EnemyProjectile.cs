@@ -35,7 +35,7 @@ public class EnemyProjectile : MonoBehaviour
           
         } else {
           // Debug.Log("player hit");
-          var playerHealth = other.GetComponent<PlayerHealth>();
+          var playerHealth = other.GetComponent<Health>();
           playerHealth.TakeDamage(damageAmount);  
         }
         
