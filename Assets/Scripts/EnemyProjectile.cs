@@ -6,6 +6,7 @@ using UnityEngine;
 public class EnemyProjectile : MonoBehaviour
 {
     public float speed = 2f;
+    public int damageAmount = 20;
     
     private Rigidbody rb;
     // Start is called before the first frame update
@@ -33,7 +34,9 @@ public class EnemyProjectile : MonoBehaviour
           Destroy(gameObject);
           
         } else {
-          // Debug.Log("player hit");  
+          // Debug.Log("player hit");
+          var playerHealth = other.GetComponent<PlayerHealth>();
+          playerHealth.TakeDamage(damageAmount);  
         }
         
       }

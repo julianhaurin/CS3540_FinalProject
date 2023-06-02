@@ -6,21 +6,29 @@ using Random = UnityEngine.Random;
 
 public class EnemyBehavior : MonoBehaviour
 {
+    public Transform player;
     public GameObject enemyAttack;
+    public int damageAmount = 100;
     [Range(1, 20)]
     [Tooltip("How likely the enemy is to attack during each frame")]
     public int attackRate = 1;
     
-    private bool clockwise = true;
+    private int speed = 2;
+    
+    // private bool clockwise = true;
     
     void Start()
     {
-
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player").transform;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        /*
         if (clockwise)
         {
             transform.Rotate(Vector3.up, 120 * Time.deltaTime);
@@ -34,17 +42,25 @@ public class EnemyBehavior : MonoBehaviour
         {
             clockwise = !clockwise;
         }
+        */
 
         if (Random.Range(0, 500) < attackRate)
         {
             Attack();
         } 
 
+        transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        transform.LookAt(player);
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        if(other.CompareTag("Player"))
+        {
+            var playerHealth = other.GetComponent<PlayerHealth>();
+            playerHealth.TakeDamage(damageAmount);
+        }
     }
 
     private void Attack()
