@@ -29,11 +29,11 @@ public class EnemyProjectile : MonoBehaviour
       if (other.gameObject.tag == "Player") {
         
         if (Input.GetKey(KeyCode.LeftShift)) {
-          Debug.Log("projectile blocked by player");
+          // Debug.Log("projectile blocked by player");
           Destroy(gameObject);
           
         } else {
-          Debug.Log("player hit");  
+          // Debug.Log("player hit");  
         }
         
       }

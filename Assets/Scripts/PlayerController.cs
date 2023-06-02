@@ -8,6 +8,13 @@ public class PlayerController : MonoBehaviour
     Vector3 input, moveDirection;
     public float speed = 10f;
 
+    public float dashSpeedMultiplier = 5f;
+    public float dashRate = 3f;
+    public float dashDuration = 1f;
+
+    float nextDashTime = 0f;
+    float lastDashTime = 0f;
+
     public float jumpHeight = 7f;
     public float gravity = 9.8f;
     public float airControl = 7.0f;
@@ -16,6 +23,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+
+        
     }
 
     // Update is called once per frame
@@ -23,6 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
+
 
         //make sure your updating current location, not starting over
         //normalize to make sure when pressing both youre not moving faster than just 1 direction
@@ -36,6 +46,30 @@ public class PlayerController : MonoBehaviour
             if (Input.GetButton("Jump"))
             {
                 moveDirection.y = Mathf.Sqrt(2 * jumpHeight * gravity);
+            } 
+
+            // DASHING FUNCTIONALITY
+            else if (Input.GetKey(KeyCode.E)) {
+
+              // pressing left shift performs a dash (multiplies speed by specific amount)
+              if (Time.time < lastDashTime + dashDuration) {
+                // increases player speed for a specific amount of time (dashDuration)
+                moveDirection.x *= dashSpeedMultiplier;
+                moveDirection.z *= dashSpeedMultiplier;
+                Debug.Log("Dashing!");
+
+              } else if (Time.time > nextDashTime) {
+                // handles the first dash press after a cooldown
+                moveDirection.x *= dashSpeedMultiplier;
+                moveDirection.z *= dashSpeedMultiplier;
+                
+                // initializes time variables necessary to calculate cooldown and duration
+                lastDashTime = Time.time;
+                nextDashTime = Time.time + dashRate;
+
+              } // otherwise, the dash cooldown is in effect -> no dash
+
+
             }
             else
             {

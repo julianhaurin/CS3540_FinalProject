@@ -21,7 +21,7 @@ public class FireballScript : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("Triggered by: " + collider.gameObject.name);
+        // Debug.Log("Triggered by: " + collider.gameObject.name);
         Destroy(gameObject);
         Destroy(Instantiate(explosionVFX, transform.position, transform.rotation), 1);
     }
