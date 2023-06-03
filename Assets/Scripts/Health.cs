@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
 {
     public int startingHealth = 100;
     public Slider healthSlider;
+    public AudioClip deadSFX;
     public bool player;
 
     int currentHealth;
@@ -63,5 +64,10 @@ public class Health : MonoBehaviour
         Debug.Log("Character is dead...");
         
         transform.Rotate(-90, 0, 0, Space.Self);
+
+        if (player)
+        {
+            AudioSource.PlayClipAtPoint(deadSFX, transform.position);
+        }
     }
 }

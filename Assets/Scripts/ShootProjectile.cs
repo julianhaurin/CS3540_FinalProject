@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShootProjectile : MonoBehaviour
 {
-
+    public AudioClip projectileSFX;
     public GameObject projectilePrefab;
     public float projectileSpeed = 100f;
 
@@ -24,6 +24,7 @@ public class ShootProjectile : MonoBehaviour
           Rigidbody rb = projectile.GetComponent<Rigidbody>();
           rb.AddForce(transform.forward * projectileSpeed, ForceMode.VelocityChange);
 
+          AudioSource.PlayClipAtPoint(projectileSFX, transform.position);
         }
     }
 }

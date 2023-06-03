@@ -1575,9 +1575,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -5996138098888647397, guid: 5757c03156526124cb4a1be8257d211a, type: 3}
+      propertyPath: deadSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 43bc9b7118c7437489ba15d5077ea974, type: 3}
+    - target: {fileID: -5996138098888647397, guid: 5757c03156526124cb4a1be8257d211a, type: 3}
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 598506479}
+    - target: {fileID: 3713784408435061056, guid: 5757c03156526124cb4a1be8257d211a, type: 3}
+      propertyPath: projectileSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 5628b2d5e74ab4cc79e1ab991dd47d70, type: 3}
     - target: {fileID: 3713784408435061058, guid: 5757c03156526124cb4a1be8257d211a, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1626,6 +1634,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3713784408435061065, guid: 5757c03156526124cb4a1be8257d211a, type: 3}
+      propertyPath: dashSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 807ad35c267ffe947a13ef9f993c0e8e, type: 3}
     - target: {fileID: 3713784408435061071, guid: 5757c03156526124cb4a1be8257d211a, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -1696,6 +1708,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2726280957990539234, guid: 22a8b2e2662106b45ae4667987874b13, type: 3}
+      propertyPath: deadSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 43bc9b7118c7437489ba15d5077ea974, type: 3}
     - target: {fileID: -2726280957990539234, guid: 22a8b2e2662106b45ae4667987874b13, type: 3}
       propertyPath: healthSlider
       value: 
