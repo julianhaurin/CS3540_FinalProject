@@ -8,7 +8,8 @@ public class EnemyBehavior : MonoBehaviour
 {
     public Transform player;
     public GameObject enemyAttack;
-    public int damageAmount = 100;
+    public int collisionDamage = 100;
+    public int hitDamage = 20;
     [Range(1, 20)]
     [Tooltip("How likely the enemy is to attack during each frame")]
     public int attackRate = 1;
@@ -58,8 +59,12 @@ public class EnemyBehavior : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            var playerHealth = other.GetComponent<PlayerHealth>();
-            playerHealth.TakeDamage(damageAmount);
+            var playerHealth = other.GetComponent<Health>();
+            playerHealth.TakeDamage(collisionDamage);
+        } else if (other.CompareTag("Projectile"))
+        {
+            var enemyHealth = gameObject.GetComponent<Health>();
+            enemyHealth.TakeDamage(hitDamage);
         }
     }
 

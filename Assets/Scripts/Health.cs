@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHealth : MonoBehaviour
+public class Health : MonoBehaviour
 {
     public int startingHealth = 100;
     public Slider healthSlider;
+    public bool player;
 
     int currentHealth;
     // Start is called before the first frame update
@@ -19,7 +20,17 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (currentHealth <= 0)
+        {
+            if (player) 
+            {
+                FindObjectOfType<LevelManager>().LevelLost();
+            }
+            else 
+            {
+                FindObjectOfType<LevelManager>().LevelBeat();
+            }
+        }
     }
 
     public void TakeDamage(int damageAmount)
@@ -31,7 +42,7 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             currentHealth = 0;
-            PlayerDies();
+            Dies();
         }
 
         healthSlider.value = currentHealth;
@@ -47,9 +58,9 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    void PlayerDies()
+    void Dies()
     {
-        Debug.Log("Player is dead...");
+        Debug.Log("Character is dead...");
         
         transform.Rotate(-90, 0, 0, Space.Self);
     }
