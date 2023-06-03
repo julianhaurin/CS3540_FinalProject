@@ -73,7 +73,7 @@ public class Health : MonoBehaviour
         else
         {
             Instantiate(enemyDeath, transform.position, transform.rotation);
-            destroy(gameObject, 0.5f);
+            Destroy(gameObject, 0.5f);
         }
     }
 }
