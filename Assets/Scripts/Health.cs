@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
     public Slider healthSlider;
     public AudioClip deadSFX;
     public bool player;
+    public GameObject enemyDeath;
 
     int currentHealth;
     // Start is called before the first frame update
@@ -68,6 +69,11 @@ public class Health : MonoBehaviour
         if (player)
         {
             AudioSource.PlayClipAtPoint(deadSFX, transform.position);
+        }
+        else
+        {
+            Instantiate(enemyDeath, transform.position, transform.rotation);
+            destroy(gameObject, 0.5f);
         }
     }
 }
