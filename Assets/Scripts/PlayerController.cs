@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     public float gravity = 9.8f;
     public float airControl = 7.0f;
 
+    public AudioClip dashSFX;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,23 +53,25 @@ public class PlayerController : MonoBehaviour
             // DASHING FUNCTIONALITY
             else if (Input.GetKey(KeyCode.E)) {
 
-              // pressing left shift performs a dash (multiplies speed by specific amount)
-              if (Time.time < lastDashTime + dashDuration) {
-                // increases player speed for a specific amount of time (dashDuration)
-                moveDirection.x *= dashSpeedMultiplier;
-                moveDirection.z *= dashSpeedMultiplier;
-                Debug.Log("Dashing!");
+                AudioSource.PlayClipAtPoint(dashSFX, transform.position);
 
-              } else if (Time.time > nextDashTime) {
-                // handles the first dash press after a cooldown
-                moveDirection.x *= dashSpeedMultiplier;
-                moveDirection.z *= dashSpeedMultiplier;
-                
-                // initializes time variables necessary to calculate cooldown and duration
-                lastDashTime = Time.time;
-                nextDashTime = Time.time + dashRate;
+                // pressing left shift performs a dash (multiplies speed by specific amount)
+                if (Time.time < lastDashTime + dashDuration) {
+                    // increases player speed for a specific amount of time (dashDuration)
+                    moveDirection.x *= dashSpeedMultiplier;
+                    moveDirection.z *= dashSpeedMultiplier;
+                    Debug.Log("Dashing!");
 
-              } // otherwise, the dash cooldown is in effect -> no dash
+                } else if (Time.time > nextDashTime) {
+                    // handles the first dash press after a cooldown
+                    moveDirection.x *= dashSpeedMultiplier;
+                    moveDirection.z *= dashSpeedMultiplier;
+                    
+                    // initializes time variables necessary to calculate cooldown and duration
+                    lastDashTime = Time.time;
+                    nextDashTime = Time.time + dashRate;
+
+                } // otherwise, the dash cooldown is in effect -> no dash
 
 
             }
