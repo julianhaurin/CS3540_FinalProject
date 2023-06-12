@@ -21,7 +21,7 @@ public class ShootProjectile : MonoBehaviour
     void Update()
     {
         // shoots a projectile from the player when a fire1 button is pressed
-        if (Input.GetButtonDown("Fire1")) {
+        if (Input.GetButtonDown("Fire1") && !FindObjectOfType<LevelManager>().isPaused) {
           GameObject projectile = 
             Instantiate(projectilePrefab, transform.position + transform.forward, transform.rotation) as GameObject;
 
