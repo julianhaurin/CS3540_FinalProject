@@ -102,6 +102,8 @@ public class PlayerController : MonoBehaviour
         else 
         {
             moveDirection.y -= gravity * Time.deltaTime;
+            moveDirection.x = 0;
+            moveDirection.z = 0;
 
             controller.Move(moveDirection * Time.deltaTime);
         }
