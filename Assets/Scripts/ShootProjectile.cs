@@ -8,6 +8,10 @@ public class ShootProjectile : MonoBehaviour
     public GameObject projectilePrefab;
     public float projectileSpeed = 100f;
 
+    public float shieldCooldown = 5.0f;
+    public GameObject ShieldPrefab;
+    bool coolingDown = false;
+
     void Start()
     {
         
@@ -25,6 +29,30 @@ public class ShootProjectile : MonoBehaviour
           rb.AddForce(transform.forward * projectileSpeed, ForceMode.VelocityChange);
 
           AudioSource.PlayClipAtPoint(projectileSFX, transform.position);
+        }
+
+        /*if (Input.GetKeyDown(KeyCode.S) && Time.time > NextFire) {
+          GameObject shield = Instantiate(ShieldPrefab);
+          shield.transform.position = transform.position;
+          shield.transform.position -= new Vector3(0, 2.5f, 0);
+          NextFire = Time.time + shieldCooldown;
+        }
+        */
+
+        if (Input.GetKeyDown(KeyCode.Tab) && !coolingDown)
+        {
+          GameObject shield = Instantiate(ShieldPrefab);
+          shield.transform.position = transform.position;
+          shield.transform.position -= new Vector3(0, 2.7f, 0);
+          coolingDown = true;
+        }
+        else{
+          shieldCooldown -= Time.deltaTime;
+          if (shieldCooldown <= 0)
+          {
+            coolingDown = false;
+            shieldCooldown += 5.0f;
+          }
         }
     }
 }

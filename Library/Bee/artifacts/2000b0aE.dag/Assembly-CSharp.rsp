@@ -325,6 +325,7 @@
 -r:"Library/Bee/artifacts/2000b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/2000b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/2000b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Scripts/DestroyObject.cs"
 "Assets/Scripts/EnemyBehavior.cs"
 "Assets/Scripts/EnemyProjectile.cs"
 "Assets/Scripts/FireballScript.cs"
@@ -332,6 +333,7 @@
 "Assets/Scripts/LevelManager.cs"
 "Assets/Scripts/LevelSelector.cs"
 "Assets/Scripts/MouseLook.cs"
+"Assets/Scripts/NPCAI.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/ShootProjectile.cs"
 -langversion:9.0

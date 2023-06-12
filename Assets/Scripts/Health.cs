@@ -51,6 +51,14 @@ public class Health : MonoBehaviour
         print("updated health" + currentHealth);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Shield") && gameObject.CompareTag("Enemy"))
+        {
+            Dies();
+        }
+    }
+
     public void TakeHealth(int healthAmount)
     {
         if(currentHealth < 100)
