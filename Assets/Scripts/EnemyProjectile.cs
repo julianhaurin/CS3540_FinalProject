@@ -27,6 +27,11 @@ public class EnemyProjectile : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other) {
+      if(other.gameObject.tag == "Shield") 
+      {
+        //shield destroys projectile
+        Destroy(gameObject);
+      }
       if (other.gameObject.tag == "Player") {
         
         if (Input.GetKey(KeyCode.LeftShift)) {

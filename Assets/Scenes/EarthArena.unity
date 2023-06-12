@@ -1979,31 +1979,11 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -2726280957990539234, guid: 22a8b2e2662106b45ae4667987874b13, type: 3}
-      propertyPath: deadSFX
-      value: 
-      objectReference: {fileID: 8300000, guid: 43bc9b7118c7437489ba15d5077ea974, type: 3}
-    - target: {fileID: -2726280957990539234, guid: 22a8b2e2662106b45ae4667987874b13, type: 3}
-      propertyPath: enemyDeath
-      value: 
-      objectReference: {fileID: 1731646663875707071, guid: 7da31eb784ec44710a7f125a267b50f6, type: 3}
-    - target: {fileID: -2726280957990539234, guid: 22a8b2e2662106b45ae4667987874b13, type: 3}
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 1284679514}
-    - target: {fileID: 6164468872333326344, guid: 22a8b2e2662106b45ae4667987874b13, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6164468872333326345, guid: 22a8b2e2662106b45ae4667987874b13, type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6164468872333326346, guid: 22a8b2e2662106b45ae4667987874b13, type: 3}
       propertyPath: m_Name
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 6164468872333326346, guid: 22a8b2e2662106b45ae4667987874b13, type: 3}
-      propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 6164468872333326391, guid: 22a8b2e2662106b45ae4667987874b13, type: 3}
