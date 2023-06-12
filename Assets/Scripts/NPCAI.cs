@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NPCAI : MonoBehaviour
 {
@@ -16,9 +17,12 @@ public class NPCAI : MonoBehaviour
 
     public float approachDistance = 5;
     public GameObject player;
+    public Canvas messagePrefab;
     
     Animator anim;
     float distanceToPlayer;
+    bool messageShown = false;
+    Canvas message;
 
     // Start is called before the first frame update
     void Start()
@@ -61,7 +65,7 @@ public class NPCAI : MonoBehaviour
     {
         anim.SetInteger("animState", 1);
 
-
+        PlayMessage();
         Invoke("SetIdleState", 1.5f);
     }
 
@@ -69,12 +73,9 @@ public class NPCAI : MonoBehaviour
     {
         anim.SetInteger("animState", 0);
 
-        if(distanceToPlayer > approachDistance)
+        if(distanceToPlayer > approachDistance || Input.GetKeyDown(KeyCode.X))
         {
-            currentState = FSMStates.Pace;
-        }
-        else if (Input.GetKeyDown(KeyCode.E))
-        {
+            ExitMessage();
             currentState = FSMStates.Pace;
         }
     }
@@ -82,5 +83,24 @@ public class NPCAI : MonoBehaviour
     void SetIdleState()
     {
         currentState = FSMStates.Idle;
+    }
+
+    void PlayMessage()
+    {
+        transform.LookAt(player.transform);
+        if (!messageShown)
+        {
+            message = Instantiate(messagePrefab) as Canvas;
+            messageShown = true;
+        }
+    }
+
+    void ExitMessage()
+    {
+        if (messageShown)
+        {
+            Destroy(message);
+            messageShown = false;
+        }
     }
 }
