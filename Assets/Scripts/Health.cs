@@ -7,7 +7,6 @@ public class Health : MonoBehaviour
 {
     public int startingHealth = 100;
     public Slider healthSlider;
-    public AudioClip deadSFX;
     public bool player;
     public GameObject enemyDeath;
 

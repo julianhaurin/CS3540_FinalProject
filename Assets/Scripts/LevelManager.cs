@@ -50,7 +50,7 @@ public class LevelManager : MonoBehaviour
         Camera.main.GetComponent<AudioSource>().pitch = 2;
         AudioSource.PlayClipAtPoint(gameWonSFX, Camera.main.transform.position);
 
-        if (string.IsNullOrEmpty(nextLevel))
+        if (!string.IsNullOrEmpty(nextLevel))
         {
             Invoke("LoadNextLevel", 2);
         }

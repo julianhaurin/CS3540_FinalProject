@@ -1945,6 +1945,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 43bc9b7118c7437489ba15d5077ea974, type: 3}
     - target: {fileID: -5996138098888647397, guid: 5757c03156526124cb4a1be8257d211a, type: 3}
+      propertyPath: enemyDeath
+      value: 
+      objectReference: {fileID: 1731646663875707071, guid: 7da31eb784ec44710a7f125a267b50f6, type: 3}
+    - target: {fileID: -5996138098888647397, guid: 5757c03156526124cb4a1be8257d211a, type: 3}
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 598506479}
