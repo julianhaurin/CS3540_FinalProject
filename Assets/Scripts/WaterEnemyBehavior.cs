@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class EnemyBehavior : MonoBehaviour
+public class WaterEnemyBehavior : MonoBehaviour
 {
     
     public Transform playerTransform;
@@ -99,8 +99,22 @@ public class EnemyBehavior : MonoBehaviour
 
     private void longRangeAttack() {
       Instantiate(enemyAttack, transform.position + transform.forward + transform.up, transform.rotation);
-      Instantiate(enemyAttack, transform.position + transform.forward + transform.up + new Vector3(2f, 0, 0), transform.rotation);
-      Instantiate(enemyAttack, transform.position + transform.forward + transform.up + new Vector3(-2f, 0, 0), transform.rotation);
+      Instantiate(enemyAttack, transform.position + transform.forward + transform.up + new Vector3(2, 0, 0), transform.rotation);
+      Instantiate(enemyAttack, transform.position + transform.forward + transform.up + new Vector3(-2, 0, 0), transform.rotation);
+      Instantiate(enemyAttack, transform.position + transform.forward + transform.up + new Vector3(4, 0, 0), transform.rotation);
+      Instantiate(enemyAttack, transform.position + transform.forward + transform.up + new Vector3(-4, 0, 0), transform.rotation);
+
+      Instantiate(enemyAttack, transform.position + transform.forward + transform.up + new Vector3(0, 2, 0), transform.rotation);
+      Instantiate(enemyAttack, transform.position + transform.forward + transform.up + new Vector3(2, 2, 0), transform.rotation);
+      Instantiate(enemyAttack, transform.position + transform.forward + transform.up + new Vector3(-2, 2, 0), transform.rotation);
+      Instantiate(enemyAttack, transform.position + transform.forward + transform.up + new Vector3(4, 2, 0), transform.rotation);
+      Instantiate(enemyAttack, transform.position + transform.forward + transform.up + new Vector3(-4, 2, 0), transform.rotation);
+
+      Instantiate(enemyAttack, transform.position + transform.forward + transform.up + new Vector3(0, -2, 0), transform.rotation);
+      Instantiate(enemyAttack, transform.position + transform.forward + transform.up + new Vector3(2, -2, 0), transform.rotation);
+      Instantiate(enemyAttack, transform.position + transform.forward + transform.up + new Vector3(-2, -2, 0), transform.rotation);
+      Instantiate(enemyAttack, transform.position + transform.forward + transform.up + new Vector3(4, -2, 0), transform.rotation);
+      Instantiate(enemyAttack, transform.position + transform.forward + transform.up + new Vector3(-4, -2, 0), transform.rotation);
     }
 
     private void updateMidState() {
@@ -116,6 +130,10 @@ public class EnemyBehavior : MonoBehaviour
 
     private void midRangeAttack() {
       Instantiate(enemyAttack, transform.position + transform.forward + transform.up, transform.rotation);
+      Instantiate(enemyAttack, transform.position + transform.forward * 2 + transform.up, transform.rotation);
+      Instantiate(enemyAttack, transform.position + transform.forward * 3 + transform.up, transform.rotation);
+      Instantiate(enemyAttack, transform.position + transform.forward * 4 + transform.up, transform.rotation);
+      Instantiate(enemyAttack, transform.position + transform.forward * 5 + transform.up, transform.rotation);
 
     }
 
