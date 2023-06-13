@@ -20,6 +20,8 @@ public class ShootProjectile : MonoBehaviour
     
     void Update()
     {
+      if (!FindObjectOfType<LevelManager>().isPaused)
+      {
         // shoots a projectile from the player when a fire1 button is pressed
         if (Input.GetButtonDown("Fire1")) {
           GameObject projectile = 
@@ -54,5 +56,6 @@ public class ShootProjectile : MonoBehaviour
             shieldCooldown += 5.0f;
           }
         }
+      }
     }
 }

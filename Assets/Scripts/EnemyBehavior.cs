@@ -29,42 +29,32 @@ public class EnemyBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        if (clockwise)
+        if (!FindObjectOfType<LevelManager>().isPaused)
         {
-            transform.Rotate(Vector3.up, 120 * Time.deltaTime);
+
+            if (Random.Range(0, 500) < attackRate)
+            {
+                Attack();
+            } 
+
+            transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            transform.LookAt(player);
         }
-        else
-        {
-            transform.Rotate(Vector3.up, -120 * Time.deltaTime);
-        }
-
-        if (Random.Range(0, 50) == 0)
-        {
-            clockwise = !clockwise;
-        }
-        */
-
-        if (Random.Range(0, 500) < attackRate)
-        {
-            Attack();
-        } 
-
-        transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-        transform.LookAt(player);
-
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if (!FindObjectOfType<LevelManager>().isPaused)
         {
-            var playerHealth = other.GetComponent<Health>();
-            playerHealth.TakeDamage(collisionDamage);
-        } else if (other.CompareTag("Projectile"))
-        {
-            var enemyHealth = gameObject.GetComponent<Health>();
-            enemyHealth.TakeDamage(hitDamage);
+            if(other.CompareTag("Player"))
+            {
+                var playerHealth = other.GetComponent<Health>();
+                playerHealth.TakeDamage(collisionDamage);
+            } else if (other.CompareTag("Projectile"))
+            {
+                var enemyHealth = gameObject.GetComponent<Health>();
+                enemyHealth.TakeDamage(hitDamage);
+            }
         }
     }
 

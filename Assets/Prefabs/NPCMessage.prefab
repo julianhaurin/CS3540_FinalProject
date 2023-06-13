@@ -158,12 +158,12 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Hi there! Welcome to the Earth Arena. In this arena, you will compete
     against Diago from the Earth School. Diago will pelt you with rocks any chance
-    he gets, so block his attacks by pressing the [] key. \n\nYou can attack Diago
+    he gets, so block his attacks by pressing the Tab key. \n\nYou can attack Diago
     as well, by pressing the Control key. Move around the arena using your arrow
-    or W, A, S, D keys. Jump using the spacebar and press the E key to dash at top
+    or W, A, S, D keys. Jump using the Spacebar and press the E key to dash at top
     speed.\n\nIf your health bar in the bottom left reaches 0, you lose this level.
     If Diago's health bar in the bottom right reaches 0, you win and proceed to the
-    next level. Good luck!\n\nPress X or walk away to resume gameplay."
+    next level. Good luck!\n\nPress X to resume gameplay."
 --- !u!1 &4391654397034649864
 GameObject:
   m_ObjectHideFlags: 0

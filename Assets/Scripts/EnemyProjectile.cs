@@ -27,23 +27,26 @@ public class EnemyProjectile : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other) {
-      if(other.gameObject.tag == "Shield") 
+      if (!FindObjectOfType<LevelManager>().isPaused)
       {
-        //shield destroys projectile
-        Destroy(gameObject);
-      }
-      if (other.gameObject.tag == "Player") {
-        
-        if (Input.GetKey(KeyCode.LeftShift)) {
-          // Debug.Log("projectile blocked by player");
+        if(other.gameObject.tag == "Shield") 
+        {
+          //shield destroys projectile
           Destroy(gameObject);
-          
-        } else {
-          // Debug.Log("player hit");
-          var playerHealth = other.GetComponent<Health>();
-          playerHealth.TakeDamage(damageAmount);  
         }
-        
+        if (other.gameObject.tag == "Player") {
+          
+          if (Input.GetKey(KeyCode.LeftShift)) {
+            // Debug.Log("projectile blocked by player");
+            Destroy(gameObject);
+            
+          } else {
+            // Debug.Log("player hit");
+            var playerHealth = other.GetComponent<Health>();
+            playerHealth.TakeDamage(damageAmount);  
+          }
+          
+        }
       }
     }
 }
