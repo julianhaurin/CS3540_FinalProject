@@ -11,6 +11,9 @@ public class LevelManager : MonoBehaviour
     public static bool isGameOver = false;
     public bool isPaused = false;
 
+    public AudioClip gameOverSFX;
+    public AudioClip gameWonSFX;
+
     public string nextLevel;
 
     // Start is called before the first frame update
@@ -32,6 +35,9 @@ public class LevelManager : MonoBehaviour
         gameText.text = "GAME OVER!";
         gameText.gameObject.SetActive(true);
 
+        Camera.main.GetComponent<AudioSource>().pitch = 1;
+        AudioSource.PlayClipAtPoint(gameOverSFX, Camera.main.transform.position);
+
         Invoke("LoadCurrentLevel", 2);
     }
 
@@ -40,6 +46,9 @@ public class LevelManager : MonoBehaviour
         isGameOver = true;
         gameText.text = "YOU WIN!";
         gameText.gameObject.SetActive(true);
+        
+        Camera.main.GetComponent<AudioSource>().pitch = 2;
+        AudioSource.PlayClipAtPoint(gameWonSFX, Camera.main.transform.position);
 
         if (string.IsNullOrEmpty(nextLevel))
         {

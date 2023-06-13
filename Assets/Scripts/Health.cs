@@ -70,15 +70,9 @@ public class Health : MonoBehaviour
 
     void Dies()
     {
-        Debug.Log("Character is dead...");
-        
         transform.Rotate(-90, 0, 0, Space.Self);
 
-        if (player)
-        {
-            AudioSource.PlayClipAtPoint(deadSFX, transform.position);
-        }
-        else
+        if (!player)
         {
             Instantiate(enemyDeath, transform.position, transform.rotation);
             Destroy(gameObject, 0.5f);
