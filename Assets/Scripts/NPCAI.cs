@@ -55,7 +55,7 @@ public class NPCAI : MonoBehaviour
     {
         anim.SetInteger("animState", 2);
 
-        if(distanceToPlayer <= approachDistance)
+        if(distanceToPlayer <= approachDistance && !FindObjectOfType<PlayerController>().sawMessage)
         {
             currentState = FSMStates.Wave;
         }
@@ -73,7 +73,7 @@ public class NPCAI : MonoBehaviour
     {
         anim.SetInteger("animState", 0);
 
-        if(distanceToPlayer > approachDistance || Input.GetKeyDown(KeyCode.X))
+        if(Input.GetKeyDown(KeyCode.X))
         {
             ExitMessage();
             currentState = FSMStates.Pace;
@@ -87,16 +87,19 @@ public class NPCAI : MonoBehaviour
 
     void PlayMessage()
     {
+        FindObjectOfType<LevelManager>().Pause();
         transform.LookAt(player.transform);
         if (!messageShown)
         {
             message = Instantiate(messagePrefab) as Canvas;
             messageShown = true;
+            FindObjectOfType<PlayerController>().sawMessage = true;
         }
     }
 
     void ExitMessage()
     {
+        FindObjectOfType<LevelManager>().UnPause();
         if (messageShown)
         {
             Destroy(message);

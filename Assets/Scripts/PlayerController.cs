@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public float airControl = 7.0f;
 
     public AudioClip dashSFX;
+    public bool sawMessage;
 
     // Start is called before the first frame update
     void Start()
@@ -32,64 +33,79 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-
-
-        //make sure your updating current location, not starting over
-        //normalize to make sure when pressing both youre not moving faster than just 1 direction
-        input = (transform.right * moveHorizontal + transform.forward* moveVertical).normalized;
-
-        input *= speed;
-        if (controller.isGrounded)
+        if (!FindObjectOfType<LevelManager>().isPaused)
         {
-            moveDirection = input;
+            float moveHorizontal = Input.GetAxis("Horizontal");
+            float moveVertical = Input.GetAxis("Vertical");
 
-            if (Input.GetButton("Jump"))
+
+            //make sure your updating current location, not starting over
+            //normalize to make sure when pressing both youre not moving faster than just 1 direction
+            input = (transform.right * moveHorizontal + transform.forward* moveVertical).normalized;
+
+            input *= speed;
+            if (controller.isGrounded)
             {
-                moveDirection.y = Mathf.Sqrt(2 * jumpHeight * gravity);
-            } 
+                moveDirection = input;
 
-            // DASHING FUNCTIONALITY
-            else if (Input.GetKey(KeyCode.E)) {
+                if (Input.GetButton("Jump"))
+                {
+                    moveDirection.y = Mathf.Sqrt(2 * jumpHeight * gravity);
+                } 
 
-                AudioSource.PlayClipAtPoint(dashSFX, transform.position);
+                // DASHING FUNCTIONALITY
+                else if (Input.GetKey(KeyCode.E)) {
 
-                // pressing left shift performs a dash (multiplies speed by specific amount)
-                if (Time.time < lastDashTime + dashDuration) {
-                    // increases player speed for a specific amount of time (dashDuration)
-                    moveDirection.x *= dashSpeedMultiplier;
-                    moveDirection.z *= dashSpeedMultiplier;
-                    Debug.Log("Dashing!");
+                    AudioSource.PlayClipAtPoint(dashSFX, transform.position);
 
-                } else if (Time.time > nextDashTime) {
-                    // handles the first dash press after a cooldown
-                    moveDirection.x *= dashSpeedMultiplier;
-                    moveDirection.z *= dashSpeedMultiplier;
-                    
-                    // initializes time variables necessary to calculate cooldown and duration
-                    lastDashTime = Time.time;
-                    nextDashTime = Time.time + dashRate;
+                    // pressing left shift performs a dash (multiplies speed by specific amount)
+                    if (Time.time < lastDashTime + dashDuration) {
+                        // increases player speed for a specific amount of time (dashDuration)
+                        moveDirection.x *= dashSpeedMultiplier;
+                        moveDirection.z *= dashSpeedMultiplier;
+                        Debug.Log("Dashing!");
 
-                } // otherwise, the dash cooldown is in effect -> no dash
+                    } else if (Time.time > nextDashTime) {
+                        // handles the first dash press after a cooldown
+                        moveDirection.x *= dashSpeedMultiplier;
+                        moveDirection.z *= dashSpeedMultiplier;
+                        
+                        // initializes time variables necessary to calculate cooldown and duration
+                        lastDashTime = Time.time;
+                        nextDashTime = Time.time + dashRate;
+
+                    } // otherwise, the dash cooldown is in effect -> no dash
 
 
+                }
+                else
+                {
+                    moveDirection.y = 0.0f;
+                }
             }
             else
             {
-                moveDirection.y = 0.0f;
+
+                input.y = moveDirection.y;
+                moveDirection = Vector3.Lerp(moveDirection, input, airControl * Time.deltaTime);
             }
+
+            if (moveDirection.x != 0 || moveDirection.z != 0)
+            {
+                sawMessage = false;
+            }
+
+            moveDirection.y -= gravity * Time.deltaTime;
+
+            controller.Move(moveDirection * Time.deltaTime);
         }
         else
         {
+            moveDirection.y -= gravity * Time.deltaTime;
+            moveDirection.x = 0;
+            moveDirection.z = 0;
 
-            input.y = moveDirection.y;
-            moveDirection = Vector3.Lerp(moveDirection, input, airControl * Time.deltaTime);
+            controller.Move(moveDirection * Time.deltaTime);
         }
-
-
-        moveDirection.y -= gravity * Time.deltaTime;
-
-        controller.Move(moveDirection * Time.deltaTime);
     }
 }

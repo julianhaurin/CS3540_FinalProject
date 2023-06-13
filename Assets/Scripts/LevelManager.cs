@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     public Text gameText;
 
     public static bool isGameOver = false;
+    public bool isPaused = false;
 
     public string nextLevel;
 
@@ -44,6 +45,17 @@ public class LevelManager : MonoBehaviour
         {
             Invoke("LoadNextLevel", 2);
         }
+    }
+
+    public void Pause()
+    {
+        print("paused");
+        isPaused = true;
+    }
+
+    public void UnPause()
+    {
+        isPaused = false;
     }
 
     void LoadNextLevel()
