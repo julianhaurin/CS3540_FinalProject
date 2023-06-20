@@ -15,6 +15,7 @@ public class LevelManager : MonoBehaviour
     public AudioClip gameWonSFX;
 
     public string nextLevel;
+    public string selectedSchool;
 
     // Start is called before the first frame update
     void Start()
@@ -65,6 +66,32 @@ public class LevelManager : MonoBehaviour
     public void UnPause()
     {
         isPaused = false;
+    }
+
+    public void LoadFirstLevel()
+    {
+        // Logic for now
+        SceneManager.LoadScene("EarthArena");
+
+        // Logic for when we have all arenas
+        /*
+        if (selectedSchool == "WaterSchool")
+        {
+            SceneManager.LoadScene("WaterLevel1");
+        }
+        else if (selectedSchool == "FireSchool")
+        {
+            SceneManager.LoadScene("FireLevel1");
+        }
+        else if (selectedSchool == "AirSchool")
+        {
+            SceneManager.LoadScene("AirLevel1");
+        }
+        else if (selectedSchool == "EarthSchool")
+        {
+            SceneManager.LoadScene("EarthLevel1");
+        }
+        */
     }
 
     void LoadNextLevel()
