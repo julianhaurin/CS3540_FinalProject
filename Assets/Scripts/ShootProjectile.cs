@@ -12,14 +12,12 @@ public class ShootProjectile : MonoBehaviour
     public GameObject ShieldPrefab;
     bool coolingDown = false;
 
-    void Start()
-    {
+    void Start() {
         
     }
 
     
-    void Update()
-    {
+    void Update() {
       if (!FindObjectOfType<LevelManager>().isPaused)
       {
         // shoots a projectile from the player when a fire1 button is pressed
@@ -28,7 +26,9 @@ public class ShootProjectile : MonoBehaviour
             Instantiate(projectilePrefab, transform.position + transform.forward, transform.rotation) as GameObject;
 
           Rigidbody rb = projectile.GetComponent<Rigidbody>();
-          rb.AddForce(transform.forward * projectileSpeed, ForceMode.VelocityChange);
+
+          Vector3 cameraPitch = new Vector3(0f, (float)gameObject.transform.GetChild(0).gameObject.transform.forward.y, 0f);
+          rb.AddForce((transform.forward + cameraPitch) * projectileSpeed, ForceMode.VelocityChange);
 
           AudioSource.PlayClipAtPoint(projectileSFX, transform.position);
         }
