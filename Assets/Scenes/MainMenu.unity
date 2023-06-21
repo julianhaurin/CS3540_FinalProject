@@ -1524,6 +1524,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 400869481}
   m_CullTransparentMesh: 0
+--- !u!1 &411423632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 411423633}
+  - component: {fileID: 411423635}
+  - component: {fileID: 411423634}
+  m_Layer: 5
+  m_Name: Timer
+  m_TagString: Timer
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &411423633
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411423632}
+  m_LocalRotation: {x: -0, y: -0, z: 1.1641532e-10, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.000023841856}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4336515064625291584}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 1457, y: -100}
+  m_SizeDelta: {x: 450, y: 60}
+  m_Pivot: {x: 1, y: 0}
+--- !u!114 &411423634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411423632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 45
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 50
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Game duration: '
+--- !u!222 &411423635
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411423632}
+  m_CullTransparentMesh: 1
 --- !u!1 &553994885
 GameObject:
   m_ObjectHideFlags: 0
@@ -2761,17 +2841,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1206753642}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.000016391275}
+  m_LocalRotation: {x: -0, y: -0, z: 1.1641532e-10, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.000034272667}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4335892142314811658}
-  m_RootOrder: 2
+  m_Father: {fileID: 4336515064625291584}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.00005699694, y: -100}
+  m_AnchoredPosition: {x: 617, y: 639}
   m_SizeDelta: {x: 1000, y: 400}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1206753644
@@ -3364,9 +3444,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Annetta Stogniew is a fifth-year computer science and journalism student
-    at Northeastern. She prefers front-end development. In her free time, she likes
-    to read and be outdoors.
+  m_Text: 'Annetta Stogniew is a fifth-year computer science and journalism student
+    at Northeastern. '
 --- !u!222 &1324504443
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4647,7 +4726,7 @@ MonoBehaviour:
     try to attack you. Press TAB to launch a protective shield. To shoot projectiles
     at your opponents, press CONTROL. Use WASD keys or arrow keys to maneuver around
     the arena and SPACE to jump.\n\nAs you advance, new advantages will be available
-    to you. Look out for me in the arena to learn more!"
+    to you. I'll be back to tell you more about those. Good luck!"
 --- !u!222 &1764044384
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10943,7 +11022,6 @@ RectTransform:
   m_Children:
   - {fileID: 4336515064625291584}
   - {fileID: 4336516594695546426}
-  - {fileID: 1206753643}
   m_Father: {fileID: 4556672777562903938}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -1.748, y: -12.882001, z: 0.81100005}
@@ -11071,6 +11149,8 @@ RectTransform:
   - {fileID: 4336784301908763540}
   - {fileID: 4336829316718364874}
   - {fileID: 4334998318740633898}
+  - {fileID: 1206753643}
+  - {fileID: 411423633}
   m_Father: {fileID: 4335892142314811658}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11934,7 +12014,7 @@ Animator:
   m_GameObject: {fileID: 4554989162098741062}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e1270baf4fb10bc43b7694b66604eb68, type: 2}
+  m_Controller: {fileID: 9100000, guid: 28041441abafb41f58fda894105817ea, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -12668,6 +12748,7 @@ MonoBehaviour:
   exitMenu: {fileID: 4555105947693100992}
   theme: 0
   themeController: {fileID: 11400000, guid: e00c7d2bc58a2424b8dc09ecdafdb067, type: 2}
+  timerText: {fileID: 411423634}
   hoverSound: {fileID: 4473350371996258534}
   swooshSound: {fileID: 4474028307164897280}
 --- !u!114 &4514748419376970520
