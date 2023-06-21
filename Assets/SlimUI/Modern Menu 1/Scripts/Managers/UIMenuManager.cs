@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace SlimUI.ModernMenu{
 	public class UIMenuManager : MonoBehaviour {
@@ -22,6 +23,8 @@ namespace SlimUI.ModernMenu{
         public Theme theme;
         private int themeIndex;
         public ThemedUIData themeController;
+
+				public Text timerText;
         
 
 		[Header("SFX")]
@@ -38,6 +41,12 @@ namespace SlimUI.ModernMenu{
 			mainMenu.SetActive(true);
 
 			SetThemeColors();
+		}
+
+		void Update()
+		{
+			float timer = LevelManager.timer;
+			timerText.text = "Game duration: " + timer.ToString("f2");
 		}
 
 		void SetThemeColors()

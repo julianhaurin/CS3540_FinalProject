@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     public Text gameText;
 
     public static bool isGameOver = false;
+    public static float timer = 0;
     public bool isPaused = false;
 
     public AudioClip gameOverSFX;
@@ -27,7 +28,7 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        timer +=Time.deltaTime;
     }
 
     public void LevelLost() 
