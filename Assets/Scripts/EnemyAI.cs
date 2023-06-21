@@ -74,25 +74,24 @@ public class EnemyAI : MonoBehaviour
     void Update() {
 
       vecToPlayer = transform.position - playerTransform.position;
-      currentState = determineEnemyState(vecToPlayer);
-
-      switch(currentState) {
-        case(EnemyStates.Patrol):
-          updatePatrolState();
-          break;
-        case(EnemyStates.LongRange):
-          updateLongState();
-          break;
-        case(EnemyStates.MidRange):
-          updateMidState();
-          break;
-        case(EnemyStates.CloseRange):
-          updateCloseState();
-          break;
-      }
-
       
+      if (currentState == EnemyStates.Patrol) {
+        updatePatrolState();
+      } else {
+        currentState = determineEnemyState(vecToPlayer);
 
+        switch(currentState) {
+          case(EnemyStates.LongRange):
+            updateLongState();
+            break;
+          case(EnemyStates.MidRange):
+            updateMidState();
+            break;
+          case(EnemyStates.CloseRange):
+            updateCloseState();
+            break;
+        }
+      }
     }
 
     // Each function controls the enemy based on its respective state
@@ -117,7 +116,8 @@ public class EnemyAI : MonoBehaviour
       transform.LookAt(nextDestination);
       
       if (IsPlayerInClearFOV()) {
-        Debug.Log("PLAYER SEEN");
+        // Debug.Log("PLAYER SEEN");
+        currentState = determineEnemyState(vecToPlayer);
       }
 
     }
@@ -161,7 +161,7 @@ public class EnemyAI : MonoBehaviour
     private void updateCloseState() {
 
       // enemy is close enough to attack
-      if (vecToPlayer.magnitude <= meleeRange) {
+      if (vecToPlayer.magnitude <= 10) {
         anim.SetInteger("animState", 0);
 
         if (Time.time > lastAttackTime + attackSpeed) { // melee attack
@@ -188,16 +188,18 @@ public class EnemyAI : MonoBehaviour
     bool IsPlayerInClearFOV() {
 
       RaycastHit hit;
-      Vector3 directionToPlayer = playerTransform.position - transform.position;
-
       GameObject enemeyEyes = transform.GetChild(0).gameObject;
+      
+      Vector3 directionToPlayer = playerTransform.position - enemeyEyes.transform.position;
+
+      
 
       if (Vector3.Angle(directionToPlayer, enemeyEyes.transform.forward) <= fieldOfView) {
-        Debug.Log("test");
-        
+        // Debug.Log("test");
+
         // checks if raycast between player and enemy is unobstructed
-        if (Physics.Raycast(enemeyEyes.transform.position, directionToPlayer, out hit, longRange)) {
-          Debug.Log(hit.collider);
+        if (Physics.Raycast(enemeyEyes.transform.position, directionToPlayer, out hit, 1000)) {
+          // Debug.Log(hit.collider);
           if (hit.collider.CompareTag("Player")) return true;
 
         }
