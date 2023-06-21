@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     public Text gameText;
+    public Text timerText;
+    public Text levelText;
 
     public static bool isGameOver = false;
     public static float timer = 0;
@@ -22,6 +24,7 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         isGameOver = false;
+        levelText.text = "Level: " + SceneManager.GetActiveScene().name;
 
     }
 
@@ -29,6 +32,7 @@ public class LevelManager : MonoBehaviour
     void Update()
     {
         timer +=Time.deltaTime;
+        timerText.text = "Game duration: " + timer.ToString("f2");
     }
 
     public void LevelLost() 
