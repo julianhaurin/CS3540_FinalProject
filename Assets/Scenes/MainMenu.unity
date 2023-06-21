@@ -4726,7 +4726,7 @@ MonoBehaviour:
     try to attack you. Press TAB to launch a protective shield. To shoot projectiles
     at your opponents, press CONTROL. Use WASD keys or arrow keys to maneuver around
     the arena and SPACE to jump.\n\nAs you advance, new advantages will be available
-    to you. Look out for me in the arena to learn more!"
+    to you. I'll be back to tell you more about those. Good luck!"
 --- !u!222 &1764044384
 CanvasRenderer:
   m_ObjectHideFlags: 0
