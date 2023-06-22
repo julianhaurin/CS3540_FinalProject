@@ -1322,3 +1322,255 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2698.129558 seconds.
+  path: Assets/SkySeries Freebie/FreebieHdri/FluffballDayBack.hdr
+  artifactKey: Guid(50762494be58d144d98d179cd6ba1470) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/FreebieHdri/FluffballDayBack.hdr using Guid(50762494be58d144d98d179cd6ba1470) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ebd18aae09651d171afb8fa0ed32af4') in 0.631435 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000082 seconds.
+  path: Assets/SkySeries Freebie/FreebieHdri/FluffballDayLeft.hdr
+  artifactKey: Guid(a78d8299279fda54098aca1c72ecfae1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/FreebieHdri/FluffballDayLeft.hdr using Guid(a78d8299279fda54098aca1c72ecfae1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '870be5ce233a3a83e79a0f783f8f591c') in 0.006787 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/SkySeries Freebie/FreebieHdri/FluffballDayBottom.hdr
+  artifactKey: Guid(42e0664ae4c5c424ebcd980a10687e18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/FreebieHdri/FluffballDayBottom.hdr using Guid(42e0664ae4c5c424ebcd980a10687e18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5906ec69fb52dffe42a14aad9fe14bef') in 0.006464 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 202.225494 seconds.
+  path: Assets/Arenas/EarthArena2.fbx
+  artifactKey: Guid(80f401b605c5495448dbe0509bbe1e4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arenas/EarthArena2.fbx using Guid(80f401b605c5495448dbe0509bbe1e4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7ce3d5c1da5d178e247c00215582dcb') in 0.265750 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/SlimUI/Modern Menu 1/Fonts/Poppins-Bold SDF.asset
+  artifactKey: Guid(59ee34472c5892a4196858080cc2141e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SlimUI/Modern Menu 1/Fonts/Poppins-Bold SDF.asset using Guid(59ee34472c5892a4196858080cc2141e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56d36457cc642658184b306c9fb9cd3d') in 0.557712 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/SkySeries Freebie/SkyhighFluffycloudField.mat
+  artifactKey: Guid(f15c336556dd74f40aaca655f7767970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/SkyhighFluffycloudField.mat using Guid(f15c336556dd74f40aaca655f7767970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56d1ed5a4e2a0c217c231445d2d80f8c') in 0.126000 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000101 seconds.
+  path: Assets/PolygonAdventure/Materials/PolyAdventureMaterial_Water_01.mat
+  artifactKey: Guid(9045494f93452344d811e0d183904816) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonAdventure/Materials/PolyAdventureMaterial_Water_01.mat using Guid(9045494f93452344d811e0d183904816) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d4b6843aee09d538b1fe747ef431e9d') in 0.246018 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/PolygonAdventure/Materials/PolyAdventureMaterial_Dark_01.mat
+  artifactKey: Guid(37b168582e3c39e4f8a706d91e01c206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonAdventure/Materials/PolyAdventureMaterial_Dark_01.mat using Guid(37b168582e3c39e4f8a706d91e01c206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58428af83c58d4ec376270e9a4ce7280') in 0.068659 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/SlimUI/Modern Menu 1/Fonts/RUBIK-LIGHT SDF.asset
+  artifactKey: Guid(0b65c99348f068b49bef5db0bb76a6e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SlimUI/Modern Menu 1/Fonts/RUBIK-LIGHT SDF.asset using Guid(0b65c99348f068b49bef5db0bb76a6e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b3a79d8758d047a2b142d4d9fa9e8e3') in 0.032324 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.258084 seconds.
+  path: Assets/SlimUI/Modern Menu 1/Fonts/LATO-LIGHT SDF.asset
+  artifactKey: Guid(2032339f567bde146b32a51cb1425adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SlimUI/Modern Menu 1/Fonts/LATO-LIGHT SDF.asset using Guid(2032339f567bde146b32a51cb1425adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25f3e23c3f3b234970b3d07ca8b60ac0') in 0.027974 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/GPVFX_POTIONS PACK/TEMP/Apalu.ttf
+  artifactKey: Guid(eaa957f043e2649e3ba743fd4b161e94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GPVFX_POTIONS PACK/TEMP/Apalu.ttf using Guid(eaa957f043e2649e3ba743fd4b161e94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '629105722d0c1728ea23de1e08c6ab29') in 1.474000 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Dispel Break.mat
+  artifactKey: Guid(47a3cb57eda314b4ca16f6d9062a0271) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Dispel Break.mat using Guid(47a3cb57eda314b4ca16f6d9062a0271) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf37ee3cf7ed35932a9a76c912ca3120') in 0.061832 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/SkySeries Freebie/Cloudymorning.mat
+  artifactKey: Guid(d9dca9ae1786c394f9e79c637aa9a7bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/Cloudymorning.mat using Guid(d9dca9ae1786c394f9e79c637aa9a7bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89bba9ac1c2e99a2427b865952314a05') in 0.032717 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+  artifactKey: Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset using Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e92959a1734da9727477e5a3ab10230b') in 0.018256 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat
+  artifactKey: Guid(e73a58f6e2794ae7b1b7e50b7fb811b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat using Guid(e73a58f6e2794ae7b1b7e50b7fb811b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '451f30465a2326a120f9f6e07e31524d') in 0.097923 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Caltrop A.mat
+  artifactKey: Guid(125a042a9277d41389955cc3eb08c91f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Caltrop A.mat using Guid(125a042a9277d41389955cc3eb08c91f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af96e39bb7c85c2a18538e2dee3e4cb3') in 0.004989 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Materials/ArenaMaterial 1.mat
+  artifactKey: Guid(ab61958107e2a5743a8156051baa3784) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/ArenaMaterial 1.mat using Guid(ab61958107e2a5743a8156051baa3784) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbf0c35268b644f950b41ba1ee05affe') in 0.003982 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/SkySeries Freebie/ExampleScenes/SceneObjects/4_10.mat
+  artifactKey: Guid(db3bceb128d32144ca6fd4550ac256bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/ExampleScenes/SceneObjects/4_10.mat using Guid(db3bceb128d32144ca6fd4550ac256bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce1dc48f1574c84843d7bf1b6e0313e2') in 0.004468 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset
+  artifactKey: Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset using Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd20701f9a8225ee4eea459eafc5b982') in 0.019684 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/SkySeries Freebie/DarkStorm.mat
+  artifactKey: Guid(2039a0ad0a9d05549928b70362f54902) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/DarkStorm.mat using Guid(2039a0ad0a9d05549928b70362f54902) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c738d35b9e483544007fcdf9279cbff5') in 0.031630 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Interrupt Swarm.mat
+  artifactKey: Guid(d36d0ae7ed8a946d58078d151e5ea4bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Interrupt Swarm.mat using Guid(d36d0ae7ed8a946d58078d151e5ea4bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1371fd056da2eb2f4a452610d34b92c') in 0.029457 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/SkySeries Freebie/ExampleScenes/SceneObjects/Full.mat
+  artifactKey: Guid(1b27a20a436b4c64b882a6f739bf91de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/ExampleScenes/SceneObjects/Full.mat using Guid(1b27a20a436b4c64b882a6f739bf91de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78cbef5deef01df513c2f9b9a4253c6a') in 0.004285 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Caltop B.mat
+  artifactKey: Guid(cc346e056b7fe4cb688a419444c41f58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Caltop B.mat using Guid(cc346e056b7fe4cb688a419444c41f58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2650c6bcff233d98def0bdde7143ab70') in 0.006062 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Misc/hemisphere.fbx
+  artifactKey: Guid(0272ec765f7d54a9aa0131675ceef906) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Misc/hemisphere.fbx using Guid(0272ec765f7d54a9aa0131675ceef906) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41528afb382370385244b81b7758b74e') in 0.011255 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Materials/EarthArena-No Name.mat
+  artifactKey: Guid(db40aa2f05db5d7499cae4896c5f9363) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/EarthArena-No Name.mat using Guid(db40aa2f05db5d7499cae4896c5f9363) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbb28c669cc6eeb4788d3d990feb9fce') in 0.004520 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/SkySeries Freebie/ExampleScenes/SceneObjects/6_10.mat
+  artifactKey: Guid(abcc3c67b7d0a794f8bb91be4e85abdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/ExampleScenes/SceneObjects/6_10.mat using Guid(abcc3c67b7d0a794f8bb91be4e85abdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3df6f9760f99fad86879b4e3421722a5') in 0.003917 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/SkySeries Freebie/FluffballDay.mat
+  artifactKey: Guid(20d4f77b9022eab48b4d94599ed4bf82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/FluffballDay.mat using Guid(20d4f77b9022eab48b4d94599ed4bf82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e433284d858b068c7e13c20aa9f3035') in 0.024460 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Materials/Black.mat
+  artifactKey: Guid(328b466d2f8914e659af63ecf160e234) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Black.mat using Guid(328b466d2f8914e659af63ecf160e234) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd30dfc83a9a1ff41b8a2e7ccfbb0a919') in 0.005200 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/SkySeries Freebie/CasualDay.mat
+  artifactKey: Guid(85cf0b004bc4a654b9e501efcce47902) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/CasualDay.mat using Guid(85cf0b004bc4a654b9e501efcce47902) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a348d75ec2c739180c40bdd0febea9cb') in 0.020469 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/Magic Burst Sparks.mat
+  artifactKey: Guid(744f28aa9cf7145e39ac64e152a80814) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/Magic Burst Sparks.mat using Guid(744f28aa9cf7145e39ac64e152a80814) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9601a78b9c9d69c14166d18a3ca50475') in 0.004577 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Interrupt.mat
+  artifactKey: Guid(6eb68563a3b134263bb5de66a48ac643) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Interrupt.mat using Guid(6eb68563a3b134263bb5de66a48ac643) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45590e44c9e857f8610975eb955a2ef3') in 0.005709 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/SkySeries Freebie/ExampleScenes/SceneObjects/2_10.mat
+  artifactKey: Guid(eb10b6f571322b443bec8c532c088270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/ExampleScenes/SceneObjects/2_10.mat using Guid(eb10b6f571322b443bec8c532c088270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13c10c1e4f90305ec0db661ddf423c9c') in 0.004114 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/SkySeries Freebie/AmbienceExposure.mat
+  artifactKey: Guid(72deae4d18418f94688abef8e8483df0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/AmbienceExposure.mat using Guid(72deae4d18418f94688abef8e8483df0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd7a9e97c1c6fb36b3bd790130df3e05') in 0.021992 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion B_Fill.mat
+  artifactKey: Guid(ec15a7f470319407ba348eb79f6879fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion B_Fill.mat using Guid(ec15a7f470319407ba348eb79f6879fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50f25086d225c592d21c067b0e5e7bc7') in 0.239868 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Dispel Burst.mat
+  artifactKey: Guid(2acfe1077df4440ad9e880814460e0f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Dispel Burst.mat using Guid(2acfe1077df4440ad9e880814460e0f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f995d9c9823703c3fc38c9d9ea4c2c9') in 0.004351 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Mute.mat
+  artifactKey: Guid(c16a04df833564486b94aef65c9e5af6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Mute.mat using Guid(c16a04df833564486b94aef65c9e5af6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6806b2c4ddddbca16bbbd53e9ad514fa') in 0.005340 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Summon.mat
+  artifactKey: Guid(bdb7d8c001a2340cdab633bd8af24850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GPVFX_POTIONS PACK/VFX/VFX_Materials/GPVFX_Summon.mat using Guid(bdb7d8c001a2340cdab633bd8af24850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0235d64f2828a1755616d3852e665af') in 0.004899 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/PolygonAdventure/Materials/Characters_Black.mat
+  artifactKey: Guid(8c48e6085fe7e7f42be493f6ba01c6f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonAdventure/Materials/Characters_Black.mat using Guid(8c48e6085fe7e7f42be493f6ba01c6f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07d747d8843c5353615a57648ffd10dd') in 0.004466 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Materials/ArenaMaterial.mat
+  artifactKey: Guid(9144618c5d4206248adeff865c5ceaca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/ArenaMaterial.mat using Guid(9144618c5d4206248adeff865c5ceaca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52aca6c1a2882b250da4762827e3f321') in 0.177284 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/SkySeries Freebie/ExampleScenes/SceneObjects/8_10.mat
+  artifactKey: Guid(964f6a34e2240bf45940918b112ce7be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/ExampleScenes/SceneObjects/8_10.mat using Guid(964f6a34e2240bf45940918b112ce7be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '572e8ed6d2b562450af5ac39809f4280') in 0.003974 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/SkySeries Freebie/CosmicCoolCloud_Eq.mat
+  artifactKey: Guid(369b9ebe3a62b904dbc19bd332b44086) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/CosmicCoolCloud_Eq.mat using Guid(369b9ebe3a62b904dbc19bd332b44086) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70ee5b71a0db89bb24e38cec81098223') in 0.037394 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion D_Fill.mat
+  artifactKey: Guid(edf176e77514c40e683150a038a10cc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GPVFX_POTIONS PACK/3D/POTIONS 3D_Materials/3d Potion D_Fill.mat using Guid(edf176e77514c40e683150a038a10cc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd63cc859c006ab22316cfdf0cd45eac4') in 0.004462 seconds 
