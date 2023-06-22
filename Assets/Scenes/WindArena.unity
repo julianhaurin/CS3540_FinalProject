@@ -1920,22 +1920,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2169682996604812878, guid: 3b354507c23e7414aad39df3c5d60775, type: 3}
   m_PrefabInstance: {fileID: 477712831496506252}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1561627247
-MonoBehaviour:
+--- !u!65 &1561627247
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1561627246}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13d52c5bd5c0a4806854a0b20bb5b623, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  healthSlider: {fileID: 0}
-  player: 0
-  enemyDeath: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 2, z: 0.5}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &1603729520 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5117700066308340382, guid: b3e70e6fabd80324eac5fc21158c313a, type: 3}
@@ -2333,7 +2330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1537860096085058804, guid: 3b354507c23e7414aad39df3c5d60775, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.59
+      value: 4.61
       objectReference: {fileID: 0}
     - target: {fileID: 1537860096085058804, guid: 3b354507c23e7414aad39df3c5d60775, type: 3}
       propertyPath: m_LocalPosition.z

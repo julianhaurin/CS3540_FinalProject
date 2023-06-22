@@ -3411,8 +3411,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Annetta Stogniew is a fifth-year computer science and journalism student
-    at Northeastern. '
+  m_Text: "Annetta Stogniew is a fifth-year computer science and journalism student
+    at Northeastern. \n\nSiddharth Mallareddygari is a third-year computer science
+    major with an AI concentration.\n\nJulian Haurin is a third-year computer science
+    major with a concentration in software."
 --- !u!222 &1324504443
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -49,13 +49,15 @@ public class PlayerController : MonoBehaviour
             {
                 moveDirection = input;
 
-                if (Input.GetButton("Jump") && SceneManager.GetActiveScene().name == "WaterArena")
+                if (Input.GetButton("Jump") && ((SceneManager.GetActiveScene().name == "WaterArena") 
+                || (SceneManager.GetActiveScene().name == "Earth") 
+                || (SceneManager.GetActiveScene().name == "WindArena")))
                 {
                     moveDirection.y = Mathf.Sqrt(2 * jumpHeight * gravity);
                 } 
 
                 // DASHING FUNCTIONALITY
-                else if (Input.GetKey(KeyCode.E) && SceneManager.GetActiveScene().name == "AirArena") {
+                else if (Input.GetKey(KeyCode.E) && ((SceneManager.GetActiveScene().name == "WindArena")  || (SceneManager.GetActiveScene().name == "Earth"))) {
 
                     AudioSource.PlayClipAtPoint(dashSFX, transform.position);
 
