@@ -72,7 +72,7 @@ public class LevelManager : MonoBehaviour
     public void LoadFirstLevel()
     {
         // Logic for now
-        SceneManager.LoadScene("EarthArena");
+        SceneManager.LoadScene("FireArena");
 
         // Logic for when we have all arenas
         /*

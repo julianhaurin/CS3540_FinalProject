@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -48,13 +49,13 @@ public class PlayerController : MonoBehaviour
             {
                 moveDirection = input;
 
-                if (Input.GetButton("Jump"))
+                if (Input.GetButton("Jump") && SceneManager.GetActiveScene().name == "WaterArena")
                 {
                     moveDirection.y = Mathf.Sqrt(2 * jumpHeight * gravity);
                 } 
 
                 // DASHING FUNCTIONALITY
-                else if (Input.GetKey(KeyCode.E)) {
+                else if (Input.GetKey(KeyCode.E) && SceneManager.GetActiveScene().name == "AirArena") {
 
                     AudioSource.PlayClipAtPoint(dashSFX, transform.position);
 
