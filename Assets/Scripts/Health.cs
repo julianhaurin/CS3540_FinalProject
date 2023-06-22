@@ -32,6 +32,7 @@ public class Health : MonoBehaviour
                 FindObjectOfType<LevelManager>().LevelBeat();
             }
         }
+
     }
 
     public void TakeDamage(int damageAmount)

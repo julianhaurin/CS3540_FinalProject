@@ -11,6 +11,9 @@ using Random = UnityEngine.Random;
 public class EnemyAI : MonoBehaviour
 {
     
+    public static int enemyHealth;
+    public int enemyStartingHealth;
+
     public GameObject player;
     public GameObject enemyAttack;
 
@@ -53,6 +56,8 @@ public class EnemyAI : MonoBehaviour
     
     void Start() {
 
+      enemyHealth = enemyStartingHealth;
+
       currentState = EnemyStates.Patrol;
       agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
       anim = GetComponent<Animator>();
@@ -75,6 +80,15 @@ public class EnemyAI : MonoBehaviour
     }
 
     void Update() {
+
+      if (enemyHealth <= 0) {
+        Debug.Log("enemy dies");
+        Destroy(gameObject);
+        FindObjectOfType<LevelManager>().LevelBeat();
+        return;
+      } 
+
+      if (FindObjectOfType<LevelManager>().isPaused) return;
 
       vecToPlayer = transform.position - player.transform.position;
       
@@ -216,13 +230,13 @@ public class EnemyAI : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if(other.CompareTag("Player")) {
-            var playerHealth = other.GetComponent<Health>();
-            playerHealth.TakeDamage(collisionDamage);
+        // if(other.CompareTag("Player")) {
+        //     var playerHealth = other.GetComponent<Health>();
+        //     playerHealth.TakeDamage(collisionDamage);
 
-        } else if (other.CompareTag("Projectile")) {
-            var enemyHealth = gameObject.GetComponent<Health>();
-            enemyHealth.TakeDamage(hitDamage);
+        if (other.CompareTag("Projectile")) {
+            enemyHealth -= 10;
+            Debug.Log(enemyHealth);
 
         }
     }
@@ -251,6 +265,7 @@ public class EnemyAI : MonoBehaviour
       Quaternion lookRot = Quaternion.LookRotation(lookPos);
       lookRot.eulerAngles = new Vector3(transform.rotation.eulerAngles.x, lookRot.eulerAngles.y, transform.rotation.eulerAngles.z);
       transform.rotation = Quaternion.Slerp(transform.rotation, lookRot, Time.deltaTime * 3);
+
     }
 
     // private void Attack() {
