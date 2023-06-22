@@ -11,7 +11,7 @@ using Random = UnityEngine.Random;
 public class EnemyAI : MonoBehaviour
 {
     
-    public Transform playerTransform;
+    public GameObject player;
     public GameObject enemyAttack;
 
     private UnityEngine.AI.NavMeshAgent agent;
@@ -62,18 +62,21 @@ public class EnemyAI : MonoBehaviour
       patrolPositionIndex = 0;
       nextDestination = patrolPositions[patrolPositionIndex].transform;
 
-      if (playerTransform == null) {
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-        vecToPlayer = transform.position - playerTransform.position;
+      if (player == null) {
+        player = GameObject.FindGameObjectWithTag("Player");
       }
+
+      vecToPlayer = transform.position - player.transform.position;
 
       lastAttackTime = Time.time;
       meleeRange = 3f;
+      agent.stoppingDistance = meleeRange;
+
     }
 
     void Update() {
 
-      vecToPlayer = transform.position - playerTransform.position;
+      vecToPlayer = transform.position - player.transform.position;
       
       if (currentState == EnemyStates.Patrol) {
         updatePatrolState();
@@ -99,14 +102,14 @@ public class EnemyAI : MonoBehaviour
       if (Time.time > lastAttackTime + attackSpeed) {
         anim.SetInteger("animState", 0);
       }
-      transform.LookAt(playerTransform);
+      transform.LookAt(player.transform);
     }
 
     private void updatePatrolState() {
 
       anim.SetInteger("animState", 1);
 
-      if ((transform.position - nextDestination.position).magnitude < 2) {
+      if ((transform.position - nextDestination.position).magnitude <= meleeRange) {
         patrolPositionIndex++;
         if (patrolPositionIndex >= patrolPositions.Length) patrolPositionIndex = 0;
         nextDestination = patrolPositions[patrolPositionIndex].transform;
@@ -131,7 +134,7 @@ public class EnemyAI : MonoBehaviour
         Invoke("longRangeAttack", 1.5f);
 
       }
-      transform.LookAt(playerTransform);
+      transform.LookAt(player.transform);
       
     }
 
@@ -150,7 +153,7 @@ public class EnemyAI : MonoBehaviour
         Invoke("midRangeAttack", 0.5f);
         
       }
-      transform.LookAt(playerTransform);
+      transform.LookAt(player.transform);
     }
 
     private void midRangeAttack() {
@@ -161,7 +164,7 @@ public class EnemyAI : MonoBehaviour
     private void updateCloseState() {
 
       // enemy is close enough to attack
-      if (vecToPlayer.magnitude <= 10) {
+      if (vecToPlayer.magnitude <= meleeRange) {
         anim.SetInteger("animState", 0);
 
         if (Time.time > lastAttackTime + attackSpeed) { // melee attack
@@ -169,8 +172,8 @@ public class EnemyAI : MonoBehaviour
           anim.Play("Base Layer.MeleeAttack_OneHanded");
           audioSource.Play();
           if (vecToPlayer.magnitude < meleeRange) {
-            // var playerHealth = other.GetComponent<Health>();
-            // playerHealth.TakeDamage(collisionDamage);
+            player.GetComponent<Health>().TakeHealth(collisionDamage);
+
           };
           
         }
@@ -178,11 +181,13 @@ public class EnemyAI : MonoBehaviour
       // enemy moves towards players
       } else {
         anim.SetInteger("animState", 1);
-        agent.SetDestination(playerTransform.position);
+        agent.SetDestination(player.transform.position);
         // transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, movementSpeed * Time.deltaTime);
 
       }
-      transform.LookAt(playerTransform);
+
+      CustomLookAt(player);
+
     }
 
     bool IsPlayerInClearFOV() {
@@ -190,7 +195,7 @@ public class EnemyAI : MonoBehaviour
       RaycastHit hit;
       GameObject enemeyEyes = transform.GetChild(0).gameObject;
       
-      Vector3 directionToPlayer = playerTransform.position - enemeyEyes.transform.position;
+      Vector3 directionToPlayer = player.transform.position - enemeyEyes.transform.position;
 
       
 
@@ -239,6 +244,13 @@ public class EnemyAI : MonoBehaviour
       }
       return returnState;
       
+    }
+
+    private void CustomLookAt(GameObject target) {
+      var lookPos = target.transform.position - transform.position;
+      Quaternion lookRot = Quaternion.LookRotation(lookPos);
+      lookRot.eulerAngles = new Vector3(transform.rotation.eulerAngles.x, lookRot.eulerAngles.y, transform.rotation.eulerAngles.z);
+      transform.rotation = Quaternion.Slerp(transform.rotation, lookRot, Time.deltaTime * 3);
     }
 
     // private void Attack() {
