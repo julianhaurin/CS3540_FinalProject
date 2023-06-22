@@ -65,6 +65,8 @@ public class Health : MonoBehaviour
             currentHealth += healthAmount;
             healthSlider.value = Mathf.Clamp(currentHealth, 0, 100);
         }
+
+        Debug.Log("current health loot: " + currentHealth);
     }
 
     void Dies()

@@ -360,6 +360,7 @@
 "Assets/Scripts/Health.cs"
 "Assets/Scripts/LevelManager.cs"
 "Assets/Scripts/LevelSelector.cs"
+"Assets/Scripts/LootBehavior.cs"
 "Assets/Scripts/MouseLook.cs"
 "Assets/Scripts/NPCAI.cs"
 "Assets/Scripts/PlayerController.cs"
